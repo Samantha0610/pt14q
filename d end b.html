@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEY</title>
+    <link rel="icon" type="image/x-icon" href="b jellyfavicon.ico">
+  <style>
+    
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.hidden {
+  opacity:0;
+}
+
+body {
+  background: #d6e3ff;
+}
+
+.console-container {
+ 
+  font-family:Khula;
+  font-size:4em;
+  height:200px;
+  width:600px;
+  display:block;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+}
+.button1 {
+    background-color: #0478aa;
+    border: none;
+    border-radius: 10px;  
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 50%px;
+    cursor: pointer;
+  }
+  
+  iframe {
+  border: #2671c0;
+  border-radius: 50px;
+}
+.button2 {
+  background-color: #ffffff; 
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;  
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button22 {
+  background-color: #ffffff; 
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;  
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  margin-left: 85%;
+  cursor: pointer;
+  align-content: right;
+}
+.a2 {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+}
+
+  </style>
+</head>
+
+<body background="b jellyfish.png">
+    <center>
+      <br>
+      <iframe src="header.html" height="90" width="50%" title="header"></iframe>
+  
+    <br>
+    <br>
+    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+    <br>
+
+  </center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <button class="button2"><a class="a2" href="q10.html">back</a></button>
+      <button class="button22"><a class="a2" href="c intro.html">Proceed</a></button
+  </div>
+
+<script>
+  consoleText(['thank you', 'for answering', 'the Survey!!'], 'text',['rebeccapurple','tomato','rebeccapurple']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+</script>
+
+</body>
+</html>

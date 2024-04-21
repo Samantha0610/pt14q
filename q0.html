@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEY</title>
+    <link rel="icon" type="image/x-icon" href="b jellyfavicon.ico">
+    <link rel="stylesheet" href="allcss2.css">
+</head>
+<body bgcolor="#52b0ca">
+    <center>
+    <br>
+    <iframe src="header.html" height="90" width="50%" title="header"></iframe>
+    <br>
+    <br>
+    <br>
+    <div class="div1">
+    <form id="surveyForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <br>
+            <br>
+            <label>Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <br>
+            <br>
+            <label>Section :</label>
+            <br>
+            <label for="sec1"><input type="checkbox" id="sec1" name="sec" value="Topaz"> Topaz </label>
+            <br>
+            <label for="sec2"><input type="checkbox" id="sec2" name="sec" value="Emerald">Emerald</label>
+            <br>
+            <label for="sec3"><input type="checkbox" id="sec3" name="sec" value="Jade"> Jade</label>
+            <br>
+            <label for="sec4"><input type="checkbox" id="sec4" name="sec" value="Pearl"> Pearl </label>
+            <br>
+            <label for="sec5"><input type="checkbox" id="sec5" name="sec" value="Diamond"> Diamond</label>
+            <br>
+            <label for="sec6"><input type="checkbox" id="sec6" name="sec" value="Amethyst">Amethyst</label>
+
+            <br>
+            <br>
+            <input type="submit" value="submit" class="button222">
+        </div>
+    </form>
+    </div>
+    </center>
+
+
+    <button class="button2"><a class="a2" href="c intro.html">back</a></button>
+    <button class="button22"><a class="a2" href="q2.html">Proceed</a></button>
+<script>
+    document.getElementById('surveyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var formData = {
+        name: document.getElementById('name').value,
+        age: document.getElementById('age').value,
+        gender: document.querySelector('input[name="gender"]:checked').value,
+        sec: [],
+    };
+
+    var checkboxes = document.querySelectorAll('input[name="sec"]:checked');
+    checkboxes.forEach(function(checkbox) {
+        formData.sec.push(checkbox.value);
+    });
+    
+    localStorage.setItem('question0', JSON.stringify(formData));
+  
+});
+</script>
+</body>
+</html>

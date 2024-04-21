@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEY</title>
+    <link rel="icon" type="image/x-icon" href="b jellyfavicon.ico">
+    <link rel="stylesheet" href="allcss2.css">
+</head>
+<body bgcolor="#52b0ca">
+    <center>
+    <br>
+    <iframe src="header.html" height="90" width="50%" title="header"></iframe>
+    <br>
+    <br>
+    <br>
+    <div class="div1">
+    <form id="surveyForm8">
+        <div>
+            <br>
+            <label class="q" for="q8">How effective do you believe current conservation efforts are in protecting marine biodiversity?</label>
+            <br>
+            <br>
+            <input type="checkbox" name="ch8" id="choiceq8_1" value="Not effective at all">
+            <label for="choiceq8_1">1 - Not effective at all</label>
+            <br>
+            <input type="checkbox" name="ch8" id="choiceq8_2" value="Slightly effective">
+            <label for="choiceq8_2">2 - Slightly effective</label>
+            <br>
+            <input type="checkbox" name="ch8" id="choiceq8_3" value="Moderately effective">
+            <label for="choiceq8_3">3 - Moderately effective</label>
+            <br>
+            <input type="checkbox" name="ch8" id="choiceq8_4" value="Very effective">
+            <label for="choiceq8_4">4 - Very effective</label>
+            <br>
+            <input type="checkbox" name="ch8" id="choiceq8_5" value="Extremely effective">
+            <label for="choiceq8_5">5 - Extremely effective</label>
+            <br>
+            <br>
+            <input type="submit" value="submit" class="button222">
+        </div>
+    </form>
+    </div>
+    </center>
+
+
+    <button class="button2"><a class="a2" href="q7.html">back</a></button>
+    <button class="button22"><a class="a2" href="q9.html">Proceed</a></button>
+
+    <script>
+        document.getElementById('surveyForm8').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            var checkboxes = document.querySelectorAll('input[name="ch8"]:checked');
+            
+            var selectedOptions = [];
+            
+            checkboxes.forEach(function(checkbox) {
+                selectedOptions.push(checkbox.value);
+            });
+            
+            localStorage.setItem('', JSON.stringify(selectedOptions));
+        });
+</script>
+</body>
+</html>

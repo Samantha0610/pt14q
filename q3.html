@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEY</title>
+    <link rel="icon" type="image/x-icon" href="b jellyfavicon.ico">
+    <link rel="stylesheet" href="allcss2.css">
+</head>
+<body bgcolor="#52b0ca">
+    <center>
+    <br>
+    <iframe src="header.html" height="90" width="50%" title="header"></iframe>
+    <br>
+    <br>
+    <br>
+    <div class="div1">
+    <p class="q">Do you believe individuals can make a difference in protecting marine biodiversity? Why or why not?</p>
+    <br>
+    <br>
+    <form id="surveyForm3">
+        <div>
+            <input type="radio" name="ch3" value="Yes, because individual actions collectively impact marine ecosystems." required>
+            <label for="c3A">A) Yes, because individual actions collectively impact marine ecosystems.</label>
+            <br>
+            <input type="radio" name="ch3" value="No, because marine conservation is solely the responsibility of governments and organizations." required>
+            <label for="c3B">B) No, because marine conservation is solely the responsibility of governments and organizations.</label>
+            <br>
+            <input type="radio" name="ch3" value="Maybe, depending on the level of awareness and actions taken by individuals." required>
+            <label for="c3C">C) Maybe, depending on the level of awareness and actions taken by individuals.</label>
+            <br>
+            <input type="radio" name="ch3" value="Unsure, need more information to decide." required>
+            <label for="c3D">D) Unsure, need more information to decide</label>
+            <br>
+            <br>
+            <input type="submit" value="submit" class="button222">
+        </div>
+    </form>
+    </div>
+    </center>
+
+    <button class="button2"><a class="a2" href="q2.html">back</a></button>
+    <button class="button22"><a class="a2" href="q4.html">Proceed</a></button>
+
+<script>
+    document.getElementById('surveyForm3').addEventListener('submit', function(event) {
+        
+            localStorage.setItem('question3', document.querySelector('input[name="ch3"]:checked').value);
+
+            localStorage.setItem('question3', selectedOption.value);
+        });
+    
+</script>
+</body>
+</html>

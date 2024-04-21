@@ -1,0 +1,167 @@
+
+/* lollol*/
+iframe {
+  border: #2671c0;
+  border-radius: 50px;
+}
+
+.div1 {
+    background-color: #1a6ca7;
+    border:  #1a6ca7;
+    border-radius: 30px;
+   
+  }
+  
+  .h11 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 65px;
+    color: #ffffff;
+  }
+  .p1 {
+    background-color: #0c5387;
+  border: 1px solid #0c5387;
+  border-radius: 10px;
+  padding: 1px;
+  margin: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  }
+  
+  .button1 {
+    background-color: #2671c0;
+    border: none;
+    border-radius: 10px;  
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-right: px;
+    cursor: pointer;
+  }
+
+  .a11 {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+/* start b */
+
+.button2 {
+  background-color: #ffffff; 
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;  
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button22 {
+  background-color: #ffffff; 
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;  
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  margin-left: 85%;
+  cursor: pointer;
+  align-content: right;
+}
+
+.a11 {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.a1 {
+  background-color: #2671c0;
+  border: 1px solid #2671c0;
+  border-radius: 10px;
+  padding: 1px;
+  margin: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.a2 {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+}
+.a3 {
+  background-color: #1a6ca7;
+  border: 1px solid #1a6ca7;
+  width: 350px;
+  border-radius: 10px;
+  padding: 1px;
+  margin: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+}
+.loader {
+  margin-top: 8%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*bagong animation nmn*/
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+.hidden {
+  opacity:0;
+}
+
+.console-container {
+ 
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height:200px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
